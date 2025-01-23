@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="/static/css/contact.css" />
+  </head>
+  <body>
+    <!-- ===== BOX ICONS ===== -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!--===== CONTACT ME =====-->
+    <section class="contact section bd-container" id="contact">
+      <span class="section-subtitle"></span>
+      <h2 class="section-title">Contact Us</h2>
+
+      <div class="contact__container bd-grid">
+        <div class="contact__content bd-grid">
+          <!--  <div class="contact__box">
+            <i class="bx bx-home contact__icon"></i>
+            <h3 class="contact__title">Location</h3>
+            <span class="contact__description">#123 Lima - Peru</span>
+          </div>
+
+          <div class="contact__box">
+            <i class="bx bx-phone contact__icon"></i>
+            <h3 class="contact__title">Phone</h3>
+            <span class="contact__description">999-888-777</span>
+          </div>
+
+          <div class="contact__box">
+            <i class="bx bx-envelope contact__icon"></i>
+            <h3 class="contact__title">Gmail</h3>
+            <span class="contact__description">clayuser@email.com</span>
+          </div> -->
+
+          <div class="contact__box">
+            <i class='bx bx-user-pin contact__icon'></i>
+            <h3 class="contact__title">Soumik Das</h3>
+            <div>
+              <a href="https://www.linkedin.com/in/soumik-das-0451ba227/" target="_blank"
+               class="contact__social"
+                ><i class='bx bxl-linkedin-square'></i></a>
+              <a href="https://github.com/soumikdas04/" target="_blank"class="contact__social"
+                ><i class='bx bxl-github'></i></a>
+            </div>
+          </div>
+          <div class="contact__box">
+            <i class='bx bx-user-pin contact__icon'></i>
+            <h3 class="contact__title">Santu Maity</h3>
+            <div>
+              <a href="https://www.linkedin.com/in/santu-maity-2a574a226" target="_blank" class="contact__social"
+                ><i class='bx bxl-linkedin-square'></i></a>
+              <a href="https://github.com/santucoder/" target="_blank"class="contact__social"
+                ><i class='bx bxl-github'></i></a>
+            </div>
+          </div>
+        </div>
+
+        <form
+        action="https://api.web3forms.com/submit" method="POST"
+          class="contact__form">
+          <div class="contact__inputs">
+            <input type="hidden" name="access_key" value="968614f6-e018-408f-9284-ed9411753486">
+            <input type="text" name="Name" placeholder="Name" class="contact__input" required/>
+            <input type="email" name="email" placeholder="Email" class="contact__input" id="email-input" required/>
+
+          <textarea
+            name=""
+            id="text-msg"
+            cols="0"
+            rows="7"
+            placeholder="Message"
+            required
+           
+          ></textarea>
+
+          </div>
+          <div class="submit-btn">
+            <input
+            type="submit"
+            value="Send Message"
+            class="button contact__button"
+          />
+          </div>
+         
+        </div>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

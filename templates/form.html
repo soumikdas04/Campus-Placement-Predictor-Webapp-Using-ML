@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Placement Prediction Form</title>
+    <link rel="icon" href="/static/assets/logo.png" type="image/icon type">
+    <link rel="stylesheet" href="/static/css/style.css"> 
+    <script src="/static/js/form.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Placement Predictor</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="https://github.com/soumikdas04">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="https://drive.google.com/drive/folders/1CHN92UMPY4N7OzJiMlotvwpl9E-ThUts?usp=sharing">Documentation</a></li>
+                <li><a href="https://drive.google.com/drive/folders/1VhFPTd-4nNO3q30E9c1X-gergIPDVqNq?usp=drive_link">Presentation</a></li>
+                <li><a href="https://github.com/login">Login</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="form">
+        <h1>Placement Prediction</h1>
+
+        <form action="{{ url_for('predict')}}" name="form" method="GET" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="age">How old are you?</label>
+                <input type="number" name="age" id="age" min="19" max="30" pattern="^[0-9]\d*$" required class="" placeholder="Age"/>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Select your Gender</label>
+                <select id="gender">
+                    <option value="">Select Gender</option>
+                    <option id="male" name="gender" value="1">Male</option>
+                    <option id="female" name="gender" value="0">Female</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="stream">What stream do you study in ?</label>
+              <div class="radio-group">
+              <label for="stream-cse" class="radio-label">
+                <input type="radio" id="stream-cse" name="stream" value="2">
+                <span class="radio-button"></span> CSE
+            </label>
+              <label for="stream-it" class="radio-label">
+                <input type="radio" id="stream-it" name="stream" value="3">
+                <span class="radio-button"></span> IT
+            </label>
+                  <label for="stream-entc" class="radio-label">
+                      <input type="radio" id="stream-entc" name="stream" value="1">
+                      <span class="radio-button"></span> ECE
+                  </label>
+                  <label for="stream-civil" class="radio-label">
+                    <input type="radio" id="stream-civil" name="stream" value="6">
+                    <span class="radio-button"></span> Civil Engineering
+                </label>
+
+                  <label for="stream-mechanical" class="radio-label">
+                      <input type="radio" id="stream-mechanical" name="stream" value="4">
+                      <span class="radio-button"></span> Mechanical Engineering
+                  </label>
+                  <label for="stream-electrical" class="radio-label">
+                      <input type="radio" id="stream-electrical" name="stream" value="5">
+                      <span class="radio-button"></span> Electrical Engineering
+                  </label>
+                </div>
+
+            <div class="form-group">
+                <label for="cgpa">Enter your overall CGPA</label>
+                <input type="number" id="cgpa" name="cgpa" step="0.01" min="0" max="10" required placeholder="Enter your CGPA">
+            </div>
+
+            <div class="form-group">
+                <label for="backlogs">Do you have any backlogs ?</label>
+                <select name="backlogs" id="backlogs" required>
+                    <option value="" disabled selected>Select</option>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                  </select>
+            </div>      
+
+            <div class="form-group">
+                <label for="internships">How many Internships have you done ?</label>
+                <input type="number" name="internship" id="internship" min="0" max="3" pattern="^[0-9]\d*$" required placeholder="Enter no of internships
+              "/>
+            </div>
+
+            <div class="form-group">
+                <label for="hostel">Do you live in hostel ?</label>
+                <select name="hostel" id="hostel" required>
+                    <option value="" disabled selected>Select</option>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                  </select>
+            </div>
+
+            
+            <button type="submit" value="submit" onclick="submitForm()">Submit</button>
+
+            <script>
+                function submitForm(){
+                  if age == "" || gender == "" || stream == "" || internship == "" || cgpa =="" || hostel =="" || backlogs == "" {
+                    alert("All Fields Are Mandatory");
+                  }
+                    document.form.submit();
+                    //document.form.reset();
+    
+            }
+            </script>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy;  2025 Placement Predictor by Soumik Das. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,16 +1,7 @@
-softwares required in this project: 
-
-anaconda navigator,
-jupyter notebook, 
-VS code
-
-Flask
-Python
+flask
+python
 numpy
 pandas
 matplotlib 
 seaborn  
 scikitlearn 
-html 
-css 
-javascript
